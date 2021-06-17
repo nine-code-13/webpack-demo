@@ -4,7 +4,8 @@
   "description": "webpack study",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack-dev-server --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,18 @@
   "bugs": {
     "url": "https://github.com/nine-code-13/webpack-demo/issues"
   },
-  "homepage": "https://github.com/nine-code-13/webpack-demo#readme"
+  "homepage": "https://github.com/nine-code-13/webpack-demo#readme",
+  "devDependencies": {
+    "eslint": "^7.28.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "html-webpack-plugin": "^5.3.1",
+    "prettier": "^2.3.1",
+    "webpack": "^5.39.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "webpack-cli": "^3.3.12"
+  }
 }
