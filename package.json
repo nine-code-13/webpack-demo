@@ -19,10 +19,13 @@
   },
   "homepage": "https://github.com/nine-code-13/webpack-demo#readme",
   "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
     "eslint": "^7.28.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
     "html-webpack-plugin": "^5.3.1",
+    "husky": "^6.0.0",
     "prettier": "^2.3.1",
     "webpack": "^5.39.0",
     "webpack-dev-server": "^3.11.2",
@@ -30,5 +33,10 @@
   },
   "dependencies": {
     "webpack-cli": "^3.3.12"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+    }
   }
 }
