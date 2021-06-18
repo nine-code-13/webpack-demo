@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "eslint": "eslint src --ext js,vue --fix"
+    "eslint": "eslint src --ext js,vue --fix",
+    "pre-commit": "eslint"
   },
   "repository": {
     "type": "git",
@@ -36,21 +37,5 @@
   },
   "dependencies": {
     "webpack-cli": "^3.3.12"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "src/**/*.{jsx,txs,ts,js,json,css,md}": [
-      "eslint --fix",
-      "git add"
-    ]
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-emoji-xg"
-    }
   }
 }
